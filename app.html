@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>WeatherInApp</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <link href="https://fonts.googleapis.com/css?family=Thasadith:400,700" rel="stylesheet">
+        <!--VueJs CDN for DEV Env , with helpful console message -->
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    </head>
+    <body>
+     <div class="navbar-container">
+         <div class="navbar">
+             <div class="app-binder">   
+                <div class="appicon">    
+                </div>
+
+                <div class="appname">
+                    WeatherInPocket
+                </div>
+            </div>
+                
+        
+         </div>
+         
+     </div>
+     <div id="app">
+     <div class="weather-data-container">
+        <div class="weather-box">
+            <div class="row-item-1">New York,NY</div>
+            <div class="row-item-2">Sat, 5 Jan 2019 3:18 AM EDT</div>
+            <div class="row-item-3">{{data.weather[0].description}}</div>
+            <div class="row-item-4">
+                <!-- <div class="col-item col-1"></div> -->
+                <div class="col-item col-2">{{data.main.temp}}<sup>o</sup>C</div>
+                   <div class="col-item col-3">
+                    <div class="c3-row-1">Humidity: {{data.main.humidity}}%</div>
+                    <div class="c3-row-2">Wind: {{data.wind.speed}}</div>
+                    <div class="c3-row-3">Sunrise: 5:43 am</div>
+                    <div class="c3-row-4">Sunset: 6:04 pm</div>
+                </div>
+            </div>
+            <div class="row-item-5">
+                <div class="r-f-1">
+                   
+                        <div class="r-f-item day1">Mon</div>
+                        <div class="r-f-item day2">Tue</div>
+                        <div class="r-f-item day3">Wed</div>
+                        <div class="r-f-item day4">Thu</div>
+                        <div class="r-f-item day5">Fri</div>
+                        <div class="r-f-item day6">Sat</div>
+                        <div class="r-f-item day7">Sun</div>
+       
+                </div>
+                <div class="r-f-2">
+                    <div class="r-f-2-item day1-img"></div>
+                    <div class="r-f-2-item day2-img"></div>
+                    <div class="r-f-2-item day3-img"></div>
+                    <div class="r-f-2-item day4-img"></div>
+                    <div class="r-f-2-item day5-img"></div>
+                    <div class="r-f-2-item day6-img"></div>
+                    <div class="r-f-2-item day7-img"></div>
+                </div>
+                <div class="r-f-3">
+                    <div class="r-f-3-item day1-max-temp">29</div>
+                    <div class="r-f-3-item day2-max-temp">28</div>
+                    <div class="r-f-3-item day3-max-temp">26</div>
+                    <div class="r-f-3-item day4-max-temp">27</div>
+                    <div class="r-f-3-item day5-max-temp">31</div>
+                    <div class="r-f-3-item day6-max-temp">33</div>
+                    <div class="r-f-3-item day7-max-temp">30</div>
+                </div>
+                <div class="r-f-4">
+                    <div class="r-f-4-item ">27</div>
+                    <div class="r-f-4-item ">26</div>
+                    <div class="r-f-4-item ">23</div>
+                    <div class="r-f-4-item">24</div>
+                    <div class="r-f-4-item">28</div>
+                    <div class="r-f-4-item">30</div>
+                    <div class="r-f-4-item">29</div>
+                </div>
+            </div>
+            <div class="footer-item" >Made with ❤️ in Chennai.</div>
+        </div>
+    </div>
+    </div>
+    <script src="VueApp.js"></script>
+    </body>
+</html>
