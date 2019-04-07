@@ -8,6 +8,7 @@
         <!--VueJs CDN for DEV Env , with helpful console message -->
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+      
     </head>
     <body>
      <div class="navbar-container">
@@ -17,7 +18,7 @@
                 </div>
 
                 <div class="appname">
-                    WeatherInPocket
+                    TheCityWeather
                 </div>
             </div>
                 
@@ -28,8 +29,8 @@
      <div id="app">
      <div class="weather-data-container">
         <div class="weather-box">
-            <div class="row-item-1">New York,NY</div>
-            <div class="row-item-2">Sat, 5 Jan 2019 3:18 AM EDT</div>
+            <div class="row-item-1">Chennai,{{data.sys.country}}</div>
+            <div class="row-item-2"><div  id="today-date">{{data.dt}}</div></div>
             <div class="row-item-3">{{data.weather[0].description}}</div>
             <div class="row-item-4">
                 <!-- <div class="col-item col-1"></div> -->
@@ -37,7 +38,7 @@
                    <div class="col-item col-3">
                     <div class="c3-row-1">Humidity: {{data.main.humidity}}%</div>
                     <div class="c3-row-2">Wind: {{data.wind.speed}}</div>
-                    <div class="c3-row-3">Sunrise: 5:43 am</div>
+                    <div class="c3-row-3">Sunrise: {{data.sys.sunrise}} am</div>
                     <div class="c3-row-4">Sunset: 6:04 pm</div>
                 </div>
             </div>
@@ -60,7 +61,7 @@
                     <div class="r-f-2-item day4-img"></div>
                     <div class="r-f-2-item day5-img"></div>
                     <div class="r-f-2-item day6-img"></div>
-                    <div class="r-f-2-item day7-img"></div>
+                    <div class="r-f-2-item day7-img"></div>   
                 </div>
                 <div class="r-f-3">
                     <div class="r-f-3-item day1-max-temp">29</div>
@@ -84,7 +85,7 @@
             <div class="footer-item" >Made with ❤️ in Chennai.</div>
         </div>
     </div>
-    </div>
+    
     <script src="VueApp.js"></script>
     </body>
 </html>
