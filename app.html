@@ -4,6 +4,7 @@
         <meta charset="UTF-8"/>
         <title>WeatherInApp</title>
         <link rel="stylesheet" href="css/styles.css">
+        <link rel="icon" href="img/thermometer.png" sizes="32x32">
         <link href="https://fonts.googleapis.com/css?family=Thasadith:400,700" rel="stylesheet">
         <!--VueJs CDN for DEV Env , with helpful console message -->
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -30,7 +31,7 @@
      <div class="weather-data-container">
         <div class="weather-box">
             <div class="row-item-1">Chennai,{{data.sys.country}}</div>
-            <div class="row-item-2"><div  id="today-date">{{data.dt}}</div></div>
+            <div class="row-item-2"><div  id="today-date">2019 Apr 6 , 2:05 PM</div></div>
             <div class="row-item-3">{{data.weather[0].description}}</div>
             <div class="row-item-4">
                 <!-- <div class="col-item col-1"></div> -->
@@ -38,7 +39,7 @@
                    <div class="col-item col-3">
                     <div class="c3-row-1">Humidity: {{data.main.humidity}}%</div>
                     <div class="c3-row-2">Wind: {{data.wind.speed}}</div>
-                    <div class="c3-row-3">Sunrise: {{data.sys.sunrise}} am</div>
+                    <div class="c3-row-3">Sunrise: 6:05 am</div>
                     <div class="c3-row-4">Sunset: 6:04 pm</div>
                 </div>
             </div>
